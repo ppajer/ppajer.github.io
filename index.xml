@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>ppajer</title>
-    <link>http://example.org/index.xml</link>
-    <description>Recent content on ppajer</description>
+    <title>Digital Works by @ppajer</title>
+    <link>https://ppajer.github.io/index.xml</link>
+    <description>Recent content on Digital Works by @ppajer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 23 Jan 2017 01:57:54 +0100</lastBuildDate>
-    <atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ppajer.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Node Modules</title>
-      <link>http://example.org/blog/node-modules/</link>
+      <link>https://ppajer.github.io/blog/node-modules/</link>
       <pubDate>Mon, 23 Jan 2017 01:57:54 +0100</pubDate>
       
-      <guid>http://example.org/blog/node-modules/</guid>
+      <guid>https://ppajer.github.io/blog/node-modules/</guid>
       <description>&lt;p&gt;Giving back to the NPM community is awesome.&lt;/p&gt;
 
 &lt;p&gt;Just like on the front-end, I take great care of optimal resource usage - the &lt;a href=&#34;../../open-source/node-modules-manager/&#34;&gt;node-modules-manager&lt;/a&gt; module is the result of my engineering efforts to reduce the number of concurrent modules required by node apps and make lazy loading fast and safe. It is also available and actively developed on NPM, and has been tested and downloaded thousands of times since being published.&lt;/p&gt;
@@ -25,10 +25,10 @@
     
     <item>
       <title>Keyboard Shortcuts for wcjs-player in Node.js</title>
-      <link>http://example.org/open-source/node-wcjs-keybindings/</link>
+      <link>https://ppajer.github.io/open-source/node-wcjs-keybindings/</link>
       <pubDate>Mon, 23 Jan 2017 01:49:29 +0100</pubDate>
       
-      <guid>http://example.org/open-source/node-wcjs-keybindings/</guid>
+      <guid>https://ppajer.github.io/open-source/node-wcjs-keybindings/</guid>
       <description>&lt;p&gt;This modules brings keyboard shortcuts to wcjs-player, the node implementation of webchimera.js, which is basically VLC player in a javascript wrapper - awesome.
 Simply &lt;code&gt;require&lt;/code&gt; and pass it an instance of wcjs-player to bring a keyboard powered, more desktop-like experience to your users.
 &lt;/p&gt;
@@ -70,10 +70,10 @@ require(&#39;wcjs-keybindings&#39;).getController(wcjsPlayerInstance, keyBinding
     
     <item>
       <title>An Analytics Data Aggregator - Helios</title>
-      <link>http://example.org/open-source/helios-analytics-javascript/</link>
+      <link>https://ppajer.github.io/open-source/helios-analytics-javascript/</link>
       <pubDate>Mon, 23 Jan 2017 01:38:18 +0100</pubDate>
       
-      <guid>http://example.org/open-source/helios-analytics-javascript/</guid>
+      <guid>https://ppajer.github.io/open-source/helios-analytics-javascript/</guid>
       <description>&lt;h2 id=&#34;complex-reporting-tasks-made-easy&#34;&gt;Complex reporting tasks made easy&lt;/h2&gt;
 
 &lt;p&gt;Helios.js enables you to implement &lt;a href=&#34;http://www.optimizesmart.com/implementing-rollup-reporting-google-universal-analytics/&#34;&gt;rollup analytics reporting&lt;/a&gt; on your websites to create meaningful statistics for your brand, company, or every-other-weekend hobby project on a new level.
@@ -174,10 +174,10 @@ Helios.init(config);
     
     <item>
       <title>A Node.js Module Loader</title>
-      <link>http://example.org/open-source/node-modules-manager/</link>
+      <link>https://ppajer.github.io/open-source/node-modules-manager/</link>
       <pubDate>Mon, 23 Jan 2017 01:23:38 +0100</pubDate>
       
-      <guid>http://example.org/open-source/node-modules-manager/</guid>
+      <guid>https://ppajer.github.io/open-source/node-modules-manager/</guid>
       <description>&lt;p&gt;node-modules-manager is a lightweight module loader with the goal of optimizing the way you manage your modules and memory during development of apps with lots of dependencies. It can reduce load times and friction by allowing the developer to preload and lazy-load modules with ease, and to clear unused modules from memory as soon as possible.
 &lt;/p&gt;
 
@@ -305,10 +305,10 @@ console.log(someModule); // null
     
     <item>
       <title>A PHP Stylesheet Manager</title>
-      <link>http://example.org/open-source/stylesheet-manager-php/</link>
+      <link>https://ppajer.github.io/open-source/stylesheet-manager-php/</link>
       <pubDate>Mon, 23 Jan 2017 01:21:17 +0100</pubDate>
       
-      <guid>http://example.org/open-source/stylesheet-manager-php/</guid>
+      <guid>https://ppajer.github.io/open-source/stylesheet-manager-php/</guid>
       <description>&lt;p&gt;This handy little tool manages all your stylesheets in one place. Optimized for page speed, inline-css separates your styles into critical above-the-fold styles and low-priority styles that can be left to be loaded later during the page load process.&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;
@@ -365,10 +365,10 @@ $inlineCss-&amp;gt;inlineCSS(&#39;path/to/css&#39;); // Parses your CSS into a &
     
     <item>
       <title>Optimization Toolkits</title>
-      <link>http://example.org/blog/optimization-toolkits/</link>
+      <link>https://ppajer.github.io/blog/optimization-toolkits/</link>
       <pubDate>Mon, 23 Jan 2017 01:14:17 +0100</pubDate>
       
-      <guid>http://example.org/blog/optimization-toolkits/</guid>
+      <guid>https://ppajer.github.io/blog/optimization-toolkits/</guid>
       <description>&lt;p&gt;These handy little libraries were created to facilitate regular development tasks related to page and app speed optimization. On the server side, the &lt;a href=&#34;../../open-source/stylesheet-manager-php/&#34;&gt;PHP stylesheet manager class&lt;/a&gt; helps front-end engineers organise and inline their critical and non-critical CSS files before being transmitted to the browser. Running on the client, the more generic &lt;a href=&#34;../../open-source/resource-loader-js/&#34;&gt;JavaScript Resource Loader&lt;/a&gt; makes it easy to preload and lazy-load all kinds of resources, including javascript, css, image and even HTML5 audio and video files.&lt;/p&gt;
 
 &lt;p&gt;I intend to consolidate further recurring tasks into libraries as they get successfully abstracted away in my day-to-day workflow.&lt;/p&gt;
@@ -377,10 +377,10 @@ $inlineCss-&amp;gt;inlineCSS(&#39;path/to/css&#39;); // Parses your CSS into a &
     
     <item>
       <title>A JavaScript Resource Loader</title>
-      <link>http://example.org/open-source/resource-loader-js/</link>
+      <link>https://ppajer.github.io/open-source/resource-loader-js/</link>
       <pubDate>Mon, 23 Jan 2017 01:10:54 +0100</pubDate>
       
-      <guid>http://example.org/open-source/resource-loader-js/</guid>
+      <guid>https://ppajer.github.io/open-source/resource-loader-js/</guid>
       <description>&lt;p&gt;This lightweight JavaScript resource loader aims to be as unobtrusive and straightforward as possible both in its goal and use. It can handle loading all types of resources during or after the page has loaded and can preload resources on the fly if needed.
 &lt;/p&gt;
 
@@ -471,10 +471,10 @@ accordingly. If you supply an unsupported video format, the loader will not comp
     
     <item>
       <title>Helios Analytics Suite</title>
-      <link>http://example.org/blog/helios-analytics/</link>
+      <link>https://ppajer.github.io/blog/helios-analytics/</link>
       <pubDate>Sat, 21 Jan 2017 14:18:24 +0100</pubDate>
       
-      <guid>http://example.org/blog/helios-analytics/</guid>
+      <guid>https://ppajer.github.io/blog/helios-analytics/</guid>
       <description>
 
 &lt;p&gt;Helios.js was originally written as a JavaScript library that wraps and extends the Google Universal Analytics library. It allows developers to easily integrate Analytics, AdWords and YouTube event tracking on their websites and send the gathered data to multiple Analytics properties seamlessly. The project is currently in a stable phase and being slowly improved upon.&lt;/p&gt;

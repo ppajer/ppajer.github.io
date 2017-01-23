@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Open Source on ppajer</title>
-    <link>http://example.org/open-source/index.xml</link>
-    <description>Recent content in Open Source on ppajer</description>
+    <title>Open Source on Digital Works by @ppajer</title>
+    <link>https://ppajer.github.io/open-source/index.xml</link>
+    <description>Recent content in Open Source on Digital Works by @ppajer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 21 Jan 2017 14:55:50 +0100</lastBuildDate>
-    <atom:link href="http://example.org/open-source/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ppajer.github.io/open-source/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Keyboard Shortcuts for wcjs-player in Node.js</title>
-      <link>http://example.org/open-source/node-wcjs-keybindings/</link>
+      <link>https://ppajer.github.io/open-source/node-wcjs-keybindings/</link>
       <pubDate>Mon, 23 Jan 2017 01:49:29 +0100</pubDate>
       
-      <guid>http://example.org/open-source/node-wcjs-keybindings/</guid>
+      <guid>https://ppajer.github.io/open-source/node-wcjs-keybindings/</guid>
       <description>&lt;p&gt;This modules brings keyboard shortcuts to wcjs-player, the node implementation of webchimera.js, which is basically VLC player in a javascript wrapper - awesome.
 Simply &lt;code&gt;require&lt;/code&gt; and pass it an instance of wcjs-player to bring a keyboard powered, more desktop-like experience to your users.
 &lt;/p&gt;
@@ -56,10 +56,10 @@ require(&#39;wcjs-keybindings&#39;).getController(wcjsPlayerInstance, keyBinding
     
     <item>
       <title>An Analytics Data Aggregator - Helios</title>
-      <link>http://example.org/open-source/helios-analytics-javascript/</link>
+      <link>https://ppajer.github.io/open-source/helios-analytics-javascript/</link>
       <pubDate>Mon, 23 Jan 2017 01:38:18 +0100</pubDate>
       
-      <guid>http://example.org/open-source/helios-analytics-javascript/</guid>
+      <guid>https://ppajer.github.io/open-source/helios-analytics-javascript/</guid>
       <description>&lt;h2 id=&#34;complex-reporting-tasks-made-easy&#34;&gt;Complex reporting tasks made easy&lt;/h2&gt;
 
 &lt;p&gt;Helios.js enables you to implement &lt;a href=&#34;http://www.optimizesmart.com/implementing-rollup-reporting-google-universal-analytics/&#34;&gt;rollup analytics reporting&lt;/a&gt; on your websites to create meaningful statistics for your brand, company, or every-other-weekend hobby project on a new level.
@@ -160,10 +160,10 @@ Helios.init(config);
     
     <item>
       <title>A Node.js Module Loader</title>
-      <link>http://example.org/open-source/node-modules-manager/</link>
+      <link>https://ppajer.github.io/open-source/node-modules-manager/</link>
       <pubDate>Mon, 23 Jan 2017 01:23:38 +0100</pubDate>
       
-      <guid>http://example.org/open-source/node-modules-manager/</guid>
+      <guid>https://ppajer.github.io/open-source/node-modules-manager/</guid>
       <description>&lt;p&gt;node-modules-manager is a lightweight module loader with the goal of optimizing the way you manage your modules and memory during development of apps with lots of dependencies. It can reduce load times and friction by allowing the developer to preload and lazy-load modules with ease, and to clear unused modules from memory as soon as possible.
 &lt;/p&gt;
 
@@ -291,10 +291,10 @@ console.log(someModule); // null
     
     <item>
       <title>A PHP Stylesheet Manager</title>
-      <link>http://example.org/open-source/stylesheet-manager-php/</link>
+      <link>https://ppajer.github.io/open-source/stylesheet-manager-php/</link>
       <pubDate>Mon, 23 Jan 2017 01:21:17 +0100</pubDate>
       
-      <guid>http://example.org/open-source/stylesheet-manager-php/</guid>
+      <guid>https://ppajer.github.io/open-source/stylesheet-manager-php/</guid>
       <description>&lt;p&gt;This handy little tool manages all your stylesheets in one place. Optimized for page speed, inline-css separates your styles into critical above-the-fold styles and low-priority styles that can be left to be loaded later during the page load process.&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;
@@ -351,10 +351,10 @@ $inlineCss-&amp;gt;inlineCSS(&#39;path/to/css&#39;); // Parses your CSS into a &
     
     <item>
       <title>A JavaScript Resource Loader</title>
-      <link>http://example.org/open-source/resource-loader-js/</link>
+      <link>https://ppajer.github.io/open-source/resource-loader-js/</link>
       <pubDate>Mon, 23 Jan 2017 01:10:54 +0100</pubDate>
       
-      <guid>http://example.org/open-source/resource-loader-js/</guid>
+      <guid>https://ppajer.github.io/open-source/resource-loader-js/</guid>
       <description>&lt;p&gt;This lightweight JavaScript resource loader aims to be as unobtrusive and straightforward as possible both in its goal and use. It can handle loading all types of resources during or after the page has loaded and can preload resources on the fly if needed.
 &lt;/p&gt;
 
