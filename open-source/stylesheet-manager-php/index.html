@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en-us" style="margin-top:5em;">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A PHP Stylesheet Manager | ppajer</title>
+<link rel="stylesheet" href="http://example.org//css/style.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/default.min.css">
+
+
+<section style="position:fixed;top:0;left:0;width:100%;background:#fff;z-index:100;padding:0.5em;" class="section">
+  <div class="container">
+    <nav class="nav">
+      <div class="nav-left">
+        <a class="nav-item" href="http://example.org/"><h1 class="title is-4">ppajer</h1></a>
+        
+        <a class="nav-item" href="/open-source/">Open Source</a>
+        
+        <a class="nav-item" href="/blog/">Devlog</a>
+        
+        <a class="nav-item" href="/contact/">Contact me</a>
+        
+      </div>
+      <div class="nav-right">
+        <nav class="nav-item level is-mobile">
+          
+        </nav>
+      </div>
+    </nav>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="subtitle is-6">January 23, 2017</h2>
+    <h1 class="title">A PHP Stylesheet Manager</h1>
+    <div class="content">
+      <p>This handy little tool manages all your stylesheets in one place. Optimized for page speed, inline-css separates your styles into critical above-the-fold styles and low-priority styles that can be left to be loaded later during the page load process.</p>
+
+<p></p>
+
+<p>Above-the-fold styles get inlined into the <code>&lt;head&gt;</code> section of your HTML to reduce the number of HTTP requests the browser has to make to load visible content.
+Below-the-fold styles get moved to <code>&lt;link&gt;</code> tags at the end of your HTML <code>&lt;body&gt;</code>. This reduces the time required for the user to start interacting with your site, while keeping the full experience intact after all assets finished loading.</p>
+
+<h2 id="initialization">Initialization</h2>
+
+<p>To begin, include <code>inline-css.php</code> in your project and initialize the class with your styles. The constructor takes a single array as parameter. This array can have two keys, <code>aboveFold</code> and <code>belowFold</code> which must each be arrays of URIs pointing to stylesheets.</p>
+
+<pre><code class="language-php">require 'path/to/inline-css.php';
+
+$styles = array(
+  'aboveFold' =&gt; array(
+    'path/to/style.css',
+    'another/stylesheet.css'
+  ),
+  'belowFold' =&gt; array(
+    'not/so/important/styles.css'
+  )
+);
+
+$inlineCss = new InlineCss($styles);
+</code></pre>
+
+<h2 id="usage-in-page-templates">Usage in page templates</h2>
+
+<p>After the class has been initialized, you can use its templating methods to include all necessary styles in your pages.</p>
+
+<pre><code class="language-php">&lt;head&gt;
+  &lt;!-- This will inline all your critical styles for faster request and load time. --&gt;
+  &lt;?php $inlineCss-&gt;aboveFoldStyles(); ?&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div id=&quot;yourAwesomeContent&quot;&gt;
+    ...
+  &lt;/div&gt;
+  &lt;!-- These styles can be left to load later to keep initial parsing to a minimum. --&gt;
+  &lt;?php $inlineCss-&gt;belowFoldStyles(); ?&gt;
+&lt;/body&gt;
+
+</code></pre>
+
+<h2 id="other-methods">Other methods</h2>
+
+<p>There are also methods available to include additional styles on the go as either links or inlined CSS to allow more flexibility in its usage.</p>
+
+<pre><code class="language-php">$inlineCss-&gt;linkCSS('path/to/css'); // Links a single stylesheet as &lt;link&gt; tag.
+
+$inlineCss-&gt;inlineCSS('path/to/css'); // Parses your CSS into a &lt;style&gt; block.
+</code></pre>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container has-text-centered">
+    <p></p>
+  </div>
+</section>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+

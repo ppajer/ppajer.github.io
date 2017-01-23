@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ppajer</title>
+    <link>http://example.org/index.xml</link>
+    <description>Recent content on ppajer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 23 Jan 2017 01:57:54 +0100</lastBuildDate>
+    <atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Node Modules</title>
+      <link>http://example.org/blog/node-modules/</link>
+      <pubDate>Mon, 23 Jan 2017 01:57:54 +0100</pubDate>
+      
+      <guid>http://example.org/blog/node-modules/</guid>
+      <description>&lt;p&gt;Giving back to the NPM community is awesome.&lt;/p&gt;
+
+&lt;p&gt;Just like on the front-end, I take great care of optimal resource usage - the &lt;a href=&#34;../../open-source/node-modules-manager/&#34;&gt;node-modules-manager&lt;/a&gt; module is the result of my engineering efforts to reduce the number of concurrent modules required by node apps and make lazy loading fast and safe. It is also available and actively developed on NPM, and has been tested and downloaded thousands of times since being published.&lt;/p&gt;
+
+&lt;p&gt;The &lt;a href=&#34;../../open-source/node-wcjs-keybindings&#34;&gt;wcjs-keybindings&lt;/a&gt; module was created with more of a UX viewpoint in mind. It is plugin to the popular node implementation of the [in]famous WebChimera.js video player, which brings magic such as AVI playback to the web, courtesy of VLC player binaries. It implements an extendable set of keyboard controls for the video player such as arrow seeking and volume control, and allows developers to add their own keybindings via a flexible API.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Keyboard Shortcuts for wcjs-player in Node.js</title>
+      <link>http://example.org/open-source/node-wcjs-keybindings/</link>
+      <pubDate>Mon, 23 Jan 2017 01:49:29 +0100</pubDate>
+      
+      <guid>http://example.org/open-source/node-wcjs-keybindings/</guid>
+      <description>&lt;p&gt;This modules brings keyboard shortcuts to wcjs-player, the node implementation of webchimera.js, which is basically VLC player in a javascript wrapper - awesome.
+Simply &lt;code&gt;require&lt;/code&gt; and pass it an instance of wcjs-player to bring a keyboard powered, more desktop-like experience to your users.
+&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;This module is fully cross-browser compatible.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;how-to-use&#34;&gt;How to use&lt;/h2&gt;
+
+&lt;p&gt;Include &lt;code&gt;wcjs-keybindings&lt;/code&gt; in your project&amp;rsquo;s dependency list, run &lt;code&gt;npm install&lt;/code&gt;, then whenever you need some keybinding sugar for your wcjs-player, get a controller from this module.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;require(&#39;wcjs-keybindings&#39;).getController(wcjsPlayerInstance);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;default-keybindings&#34;&gt;Default Keybindings&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Spacebar&lt;/strong&gt;: play/pause&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Right Arrow&lt;/strong&gt;: forwards 5 seconds&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Left Arrow&lt;/strong&gt;: backwards 5 seconds&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Up Arrow&lt;/strong&gt;: increase volume by 5%&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Down Arrow&lt;/strong&gt;: decrease volume by 5%&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;custom-keybindings&#34;&gt;Custom keybindings&lt;/h2&gt;
+
+&lt;p&gt;To include custom keybindings, you can pass an object as second argument to the constructor. This object must have the desired keycodes as keys and function definitions as values.
+Within the scope of these handler functions, you can use &lt;code&gt;this&lt;/code&gt; to refer to the controller, and &lt;code&gt;this.player&lt;/code&gt; to refer to the instance of wcjs-player handler by the controller.
+Here is an example to toggle fullscreen mode upon pressing &lt;kbd&gt;F&lt;/kbd&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;var keyBindings = {
+	70 : function() {
+		this.player.toggleFullscreen();
+	}
+};
+
+require(&#39;wcjs-keybindings&#39;).getController(wcjsPlayerInstance, keyBindings)
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+    <item>
+      <title>An Analytics Data Aggregator - Helios</title>
+      <link>http://example.org/open-source/helios-analytics-javascript/</link>
+      <pubDate>Mon, 23 Jan 2017 01:38:18 +0100</pubDate>
+      
+      <guid>http://example.org/open-source/helios-analytics-javascript/</guid>
+      <description>&lt;h2 id=&#34;complex-reporting-tasks-made-easy&#34;&gt;Complex reporting tasks made easy&lt;/h2&gt;
+
+&lt;p&gt;Helios.js enables you to implement &lt;a href=&#34;http://www.optimizesmart.com/implementing-rollup-reporting-google-universal-analytics/&#34;&gt;rollup analytics reporting&lt;/a&gt; on your websites to create meaningful statistics for your brand, company, or every-other-weekend hobby project on a new level.
+&lt;/p&gt;
+
+&lt;h2 id=&#34;track-all-your-properties-at-once&#34;&gt;Track all your properties at once&lt;/h2&gt;
+
+&lt;p&gt;It allows you to track visitors on multiple websites in a single Analytics property as well as their respective properties, including pageviews, events and conversions. Helios.js supports an unlimited amount of Universal Analytics properties for sending visitor data to out of the box, without unnecessary configuration.&lt;/p&gt;
+
+&lt;h2 id=&#34;send-events-to-multiple-properties&#34;&gt;Send events to multiple properties&lt;/h2&gt;
+
+&lt;h3 id=&#34;setup&#34;&gt;Setup&lt;/h3&gt;
+
+&lt;p&gt;To start tracking your visitors with Helios, all you need is a JSON manifest of the Google Analytics properties you want to send data to. Simply call &lt;code&gt;Helios.init()&lt;/code&gt; passing your configuration object as parameter. A basic configuration object looks like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;{
+    &amp;quot;primary&amp;quot;   : &amp;quot;UA-XXXXX-XX&amp;quot;,    //A UA code string
+    &amp;quot;secondary&amp;quot; : [                 //An array containing any amount of valid UA code strings
+        &amp;quot;UA-YYYYY-YY&amp;quot;,
+        &amp;quot;UA-ZZZZZ-ZZ&amp;quot;
+    ],
+    &amp;quot;events&amp;quot;    : []                //An array of event objects. Refer to the Custom events section.
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Here, Helios will send your data to the properties marked by all UA codes listed above.&lt;/p&gt;
+
+&lt;h3 id=&#34;custom-events&#34;&gt;Custom events&lt;/h3&gt;
+
+&lt;p&gt;Setting up events to track is simple with Helios&amp;rsquo;s  JSON interface for creating event trackers. An event tracker object is defined using the following basic markup:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;{
+    &amp;quot;selector&amp;quot;  : &amp;quot;#example-id&amp;quot;,    //A CSS selector to be used as the event&#39;s trigger (string)
+    &amp;quot;category&amp;quot;  : &amp;quot;example_cat&amp;quot;,    //A category name under which the event will appear in GA (string)
+    &amp;quot;action&amp;quot;    : &amp;quot;example_action&amp;quot;, //An action name under which the event will appear in GA (string)
+    &amp;quot;label&amp;quot;     : &amp;quot;example_label&amp;quot;,  //A label under which the event will appear in GA (string)
+    &amp;quot;value&amp;quot;     : 0                 //The value associated with the event in GA (int)
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;To make changes to the events tracked by Helios on the fly, you can create any number of arbitrary event objects and simply push these values to the &lt;code&gt;Helios.events&lt;/code&gt; array and call &lt;code&gt;Helios.trackEvents()&lt;/code&gt; .&lt;/p&gt;
+
+&lt;h3 id=&#34;complete-example&#34;&gt;Complete example&lt;/h3&gt;
+
+&lt;p&gt;Putting it all together, here is a sample snippet that initializes Helios with multiple UA properties and some custom events:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;var config = {
+    &amp;quot;primary&amp;quot;   : &amp;quot;UA-XXXXX-XX&amp;quot;,
+    &amp;quot;secondary&amp;quot; : [
+        &amp;quot;UA-YYYYY-YY&amp;quot;,
+        &amp;quot;UA-ZZZZZ-ZZ&amp;quot;
+    ],
+    &amp;quot;events&amp;quot;    : [
+        {
+            &amp;quot;selector&amp;quot;  : &amp;quot;#example-id&amp;quot;,
+            &amp;quot;category&amp;quot;  : &amp;quot;example_cat&amp;quot;,
+            &amp;quot;action&amp;quot;    : &amp;quot;example_action&amp;quot;,
+            &amp;quot;label&amp;quot;     : &amp;quot;example_label&amp;quot;,
+            &amp;quot;value&amp;quot;     : 0   
+        },
+        {
+            &amp;quot;selector&amp;quot;  : &amp;quot;#another-id&amp;quot;,
+            &amp;quot;category&amp;quot;  : &amp;quot;another_cat&amp;quot;,
+            &amp;quot;action&amp;quot;    : &amp;quot;another_action&amp;quot;,
+            &amp;quot;label&amp;quot;     : &amp;quot;another_label&amp;quot;,
+            &amp;quot;value&amp;quot;     : 10   
+        }
+    ]
+};
+
+Helios.init(config);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;From here, Helios will take care of injecting all the necessary APIs into the page, creating the trackers for all UA properties listed and listen to clicks on the specified selectors, sending the event data specified in the event objects to all linked properties. Forget about tracking code scattered all over the page and inside event handlers, just specify your tracking needs and Helios will gather all the necessary data for you.&lt;/p&gt;
+
+&lt;h2 id=&#34;track-your-adwords-conversions&#34;&gt;Track your AdWords conversions&lt;/h2&gt;
+
+&lt;p&gt;&lt;em&gt;Coming soon&amp;hellip;&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;track-your-youtube-videos&#34;&gt;Track your YouTube videos&lt;/h2&gt;
+
+&lt;p&gt;&lt;em&gt;Coming soon&amp;hellip;&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;other-methods&#34;&gt;Other methods&lt;/h2&gt;
+
+&lt;p&gt;Helios provides wrappers for the Universal Analytics API as well as methods of controlling the way events are sent to your different properties on the fly. There is no unnecessarily complicated API to learn here, just the same old methods you are used to when working with Analytics events with some added sugar.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;Helios.sendEvent(category, action, label, value)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The &lt;code&gt;sendEvent()&lt;/code&gt; method is a wrapper for &lt;code&gt;ga(&#39;send&#39;, &#39;event&#39;, ...)&lt;/code&gt; and takes the same order of parameters. It sends the same event data to all linked properties in real time.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;Helios.sendPageview()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The &lt;code&gt;sendPageview()&lt;/code&gt; method is a wrapper for &lt;code&gt;ga(&#39;send&#39;, &#39;pageview&#39;)&lt;/code&gt; and takes no additional parameters.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>A Node.js Module Loader</title>
+      <link>http://example.org/open-source/node-modules-manager/</link>
+      <pubDate>Mon, 23 Jan 2017 01:23:38 +0100</pubDate>
+      
+      <guid>http://example.org/open-source/node-modules-manager/</guid>
+      <description>&lt;p&gt;node-modules-manager is a lightweight module loader with the goal of optimizing the way you manage your modules and memory during development of apps with lots of dependencies. It can reduce load times and friction by allowing the developer to preload and lazy-load modules with ease, and to clear unused modules from memory as soon as possible.
+&lt;/p&gt;
+
+&lt;h2 id=&#34;how-to-use&#34;&gt;How to use&lt;/h2&gt;
+
+&lt;h3 id=&#34;set-up-a-base-directory&#34;&gt;Set up a base directory&lt;/h3&gt;
+
+&lt;p&gt;The module loader requires a base path to be able to handle relative module paths. You can pass the base path as the first parameter of the constructor.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;const Manager = require(&#39;node-modules-manager&#39;).createManager(&#39;full/path/to/rootdir&#39;);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;loading-modules&#34;&gt;Loading modules&lt;/h2&gt;
+
+&lt;h3 id=&#34;load-locally-installed-modules&#34;&gt;Load locally installed modules&lt;/h3&gt;
+
+&lt;p&gt;To load a module installed globally or as dependency, you can simply pass the module&amp;rsquo;s name to the &lt;a href=&#34;#initialize-with-preloaded-modules&#34;&gt;constructor&lt;/a&gt; &lt;code&gt;loadModule()&lt;/code&gt; method to load the module for later use, or the &lt;code&gt;getModule()&lt;/code&gt; method to use the module right away. You can also &lt;a href=&#34;#load-modules-with-an-alias&#34;&gt;pass an object to customize the name you access your modules by&lt;/a&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;const Manager = require(&#39;node-modules-manager&#39;).createManager(&#39;rootdir&#39;);
+
+// To load a module for later use. Returns true upon success or false if the module wasn&#39;t found.
+Manager.loadModule(&#39;installedModule&#39;);
+
+// To use a module and load it to the modules list. Returns the loaded module for immediate use.
+Manager.getModule(&#39;fs&#39;).readDirSync(/* ... */);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;load-modules-by-path&#34;&gt;Load modules by path&lt;/h3&gt;
+
+&lt;p&gt;To load a module by path, you can pass the module&amp;rsquo;s path to the &lt;a href=&#34;#initialize-with-preloaded-modules&#34;&gt;constructor&lt;/a&gt;, &lt;code&gt;loadModule()&lt;/code&gt; or &lt;code&gt;getModule()&lt;/code&gt;. The module will then be accessible through either its full path or the filename of the module (the part of the path after the last &lt;code&gt;/&lt;/code&gt;). You can also &lt;a href=&#34;#load-modules-with-an-alias&#34;&gt;pass an object to customize the name you access your modules by&lt;/a&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;const Manager = require(&#39;node-modules-manager&#39;).createManager(&#39;rootdir&#39;);
+
+// Load module by passing full path
+Manager.loadModule(&#39;path/to/module.js&#39;);
+
+// Can later be accessed by calling:
+Manager.getModule(&#39;path/to/module.js&#39;);
+
+//OR
+Manager.getModule(&#39;module.js&#39;);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;initialize-with-preloaded-modules&#34;&gt;Initialize with preloaded modules&lt;/h3&gt;
+
+&lt;p&gt;Sometimes there are some modules you simply cannot delay loading. To avoid making unnecessary calls to &lt;code&gt;loadModule()&lt;/code&gt;, you can pass an array of module names, paths, or &lt;a href=&#34;#load-modules-with-an-alias&#34;&gt;objects&lt;/a&gt; to the constructor and the module loader will load them right away.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;let modules = [
+		&#39;fs&#39;, 
+		&#39;path&#39;, 
+		&#39;path/to/some/module&#39;, 
+		&#39;other-required-module&#39;
+	];
+const Manager = require(&#39;node-modules-manager&#39;).createManager(&#39;rootdir&#39;, modules);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;load-modules-with-an-alias&#34;&gt;Load modules with an alias&lt;/h3&gt;
+
+&lt;p&gt;To access your modules by a name different from the module&amp;rsquo;s own name, you can pass an object to the constructor or &lt;code&gt;loadModule()&lt;/code&gt; methods. The keys &lt;code&gt;name&lt;/code&gt; and &lt;code&gt;path&lt;/code&gt; must be specified on all objects passed this way, and can later be accessed by passing the value of &lt;code&gt;name&lt;/code&gt; to &lt;code&gt;getModule()&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;// Initialize and pass aliased object as module to the constructor
+let modules = [
+		{
+			name: &#39;exampleModule&#39;, 
+			path:&#39;path/to/example-module.min.js&#39;
+		}
+	];
+const Manager = require(&#39;node-modules-manager&#39;).createManager(&#39;rootdir&#39;, modules); 
+// will preload the contents of &#39;rootdir/path/to/example-module.min.js&#39; as &#39;exampleModule&#39;
+
+// OR
+Manager.loadModule({name: &#39;exampleModule&#39;, path:&#39;path/to/example-module.min.js&#39;}); 
+// will preload the contents of &#39;rootdir/path/to/example-module.min.js&#39; as &#39;exampleModule&#39;
+
+// OR 
+Manager.getModule({name: &#39;exampleModule&#39;, path:&#39;path/to/example-module.min.js&#39;}); 
+// will return the contents of &#39;rootdir/path/to/example-module.min.js&#39; as &#39;exampleModule&#39;
+
+// Then sometime later...
+Manager.getModule(&#39;exampleModule&#39;); 
+//will return the contents of ModuleLoader.modulesLoaded.exampleModule
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;loading-a-module-once&#34;&gt;Loading a module once&lt;/h3&gt;
+
+&lt;p&gt;Do you only need to call a module once and then remove all references to it to keep it from hogging memory? This project has you covered! You can simply pass a callback along with the name of the module it requires to ˙getModuleOnce()` and be rid of all traces outside of your callback function. If the module has been preloaded beforehand and you want to unload it after use, set the optional third parameter of the method to a truthy value - this will force unload the module after the callback has executed. &lt;em&gt;This method will warn you if you already preloaded the required module to highlight possible optimization issues.&lt;/em&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;const Manager = require(&#39;node-modules-manager&#39;).createManager(&#39;rootdir&#39;);
+
+Manager.getModuleOnce(&#39;exampleModule&#39;, function(module) {
+	console.log(module); //exampleModule
+});
+
+// the module never lives outside the Manager
+
+// OR 
+// set the second optional forceUnload parameter to true 
+// this removes the module from memory even if it was explicitly loaded before
+Manager.loadModule(&#39;exampleModule&#39;);
+Manager.getModuleOnce(&#39;exampleModule&#39;, function(module) {
+	console.log(module);//exampleModule
+}, true);
+
+console.log(Manager.isModuleLoaded(&#39;exampleModule&#39;)); //false
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;unloading-modules&#34;&gt;Unloading modules&lt;/h2&gt;
+
+&lt;p&gt;When you&amp;rsquo;re done using some module functionality, it is sometimes preferable to drop the module from memory instead of bloating your Manager instance if you don&amp;rsquo;t plan on reusing it soon. You can unload the contents of a module at any time by calling the &lt;code&gt;unloadModule()&lt;/code&gt; method with either a module name, path or alias. The method returns &lt;code&gt;null&lt;/code&gt; on success so that its return value can be used to reset your references to the module.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;// Load the module
+const Manager = require(&#39;node-modules-manager&#39;).createManager(&#39;rootdir&#39;);
+let someModule = Manager.loadModule(&#39;someModule&#39;);
+
+// Use it while it&#39;s hot
+someModule.doSomething();
+
+// Drop from memory to speed things up when you&#39;re done
+someModule = Manager.unloadModule(&#39;someModule&#39;);
+
+console.log(someModule); // null
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+    <item>
+      <title>A PHP Stylesheet Manager</title>
+      <link>http://example.org/open-source/stylesheet-manager-php/</link>
+      <pubDate>Mon, 23 Jan 2017 01:21:17 +0100</pubDate>
+      
+      <guid>http://example.org/open-source/stylesheet-manager-php/</guid>
+      <description>&lt;p&gt;This handy little tool manages all your stylesheets in one place. Optimized for page speed, inline-css separates your styles into critical above-the-fold styles and low-priority styles that can be left to be loaded later during the page load process.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;Above-the-fold styles get inlined into the &lt;code&gt;&amp;lt;head&amp;gt;&lt;/code&gt; section of your HTML to reduce the number of HTTP requests the browser has to make to load visible content.
+Below-the-fold styles get moved to &lt;code&gt;&amp;lt;link&amp;gt;&lt;/code&gt; tags at the end of your HTML &lt;code&gt;&amp;lt;body&amp;gt;&lt;/code&gt;. This reduces the time required for the user to start interacting with your site, while keeping the full experience intact after all assets finished loading.&lt;/p&gt;
+
+&lt;h2 id=&#34;initialization&#34;&gt;Initialization&lt;/h2&gt;
+
+&lt;p&gt;To begin, include &lt;code&gt;inline-css.php&lt;/code&gt; in your project and initialize the class with your styles. The constructor takes a single array as parameter. This array can have two keys, &lt;code&gt;aboveFold&lt;/code&gt; and &lt;code&gt;belowFold&lt;/code&gt; which must each be arrays of URIs pointing to stylesheets.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;require &#39;path/to/inline-css.php&#39;;
+
+$styles = array(
+  &#39;aboveFold&#39; =&amp;gt; array(
+    &#39;path/to/style.css&#39;,
+    &#39;another/stylesheet.css&#39;
+  ),
+  &#39;belowFold&#39; =&amp;gt; array(
+    &#39;not/so/important/styles.css&#39;
+  )
+);
+
+$inlineCss = new InlineCss($styles);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;usage-in-page-templates&#34;&gt;Usage in page templates&lt;/h2&gt;
+
+&lt;p&gt;After the class has been initialized, you can use its templating methods to include all necessary styles in your pages.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;head&amp;gt;
+  &amp;lt;!-- This will inline all your critical styles for faster request and load time. --&amp;gt;
+  &amp;lt;?php $inlineCss-&amp;gt;aboveFoldStyles(); ?&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+  &amp;lt;div id=&amp;quot;yourAwesomeContent&amp;quot;&amp;gt;
+    ...
+  &amp;lt;/div&amp;gt;
+  &amp;lt;!-- These styles can be left to load later to keep initial parsing to a minimum. --&amp;gt;
+  &amp;lt;?php $inlineCss-&amp;gt;belowFoldStyles(); ?&amp;gt;
+&amp;lt;/body&amp;gt;
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;other-methods&#34;&gt;Other methods&lt;/h2&gt;
+
+&lt;p&gt;There are also methods available to include additional styles on the go as either links or inlined CSS to allow more flexibility in its usage.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;$inlineCss-&amp;gt;linkCSS(&#39;path/to/css&#39;); // Links a single stylesheet as &amp;lt;link&amp;gt; tag.
+
+$inlineCss-&amp;gt;inlineCSS(&#39;path/to/css&#39;); // Parses your CSS into a &amp;lt;style&amp;gt; block.
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+    <item>
+      <title>Optimization Toolkits</title>
+      <link>http://example.org/blog/optimization-toolkits/</link>
+      <pubDate>Mon, 23 Jan 2017 01:14:17 +0100</pubDate>
+      
+      <guid>http://example.org/blog/optimization-toolkits/</guid>
+      <description>&lt;p&gt;These handy little libraries were created to facilitate regular development tasks related to page and app speed optimization. On the server side, the &lt;a href=&#34;../../open-source/stylesheet-manager-php/&#34;&gt;PHP stylesheet manager class&lt;/a&gt; helps front-end engineers organise and inline their critical and non-critical CSS files before being transmitted to the browser. Running on the client, the more generic &lt;a href=&#34;../../open-source/resource-loader-js/&#34;&gt;JavaScript Resource Loader&lt;/a&gt; makes it easy to preload and lazy-load all kinds of resources, including javascript, css, image and even HTML5 audio and video files.&lt;/p&gt;
+
+&lt;p&gt;I intend to consolidate further recurring tasks into libraries as they get successfully abstracted away in my day-to-day workflow.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>A JavaScript Resource Loader</title>
+      <link>http://example.org/open-source/resource-loader-js/</link>
+      <pubDate>Mon, 23 Jan 2017 01:10:54 +0100</pubDate>
+      
+      <guid>http://example.org/open-source/resource-loader-js/</guid>
+      <description>&lt;p&gt;This lightweight JavaScript resource loader aims to be as unobtrusive and straightforward as possible both in its goal and use. It can handle loading all types of resources during or after the page has loaded and can preload resources on the fly if needed.
+&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;h3 id=&#34;important&#34;&gt;Important&lt;/h3&gt;
+
+&lt;p&gt;Most browsers don&amp;rsquo;t cache resources by default unless instructed to. Unfortunately this cannot be done on the client side, so to get
+the most out of this library, you need to implement sending cache headers along with your assets. This can be done by configuring your
+server appropriately or sending the headers through your server-side language of choice.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;how-it-works&#34;&gt;How it works&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;TLDR: it&amp;rsquo;s magic and just works.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Resources are considered &amp;ldquo;loaded&amp;rdquo; when they are stored in the browser&amp;rsquo;s memory. Resources are referenced by URLs. To load a resource by URL, the browser will first attempt to load it from its cache and will only download the URL&amp;rsquo;s content if it fails to find it. Cached resources are loaded from disk instead of over the network, so they appear to be loaded near-instantly. This resource loader works by silently forcing the browser to download external resources in the background and caching them, allowing you to benefit from the speed of cache loading when you reference them by the same URL.&lt;/p&gt;
+
+&lt;h2 id=&#34;resource-types&#34;&gt;Resource types&lt;/h2&gt;
+
+&lt;p&gt;This library supports the following resource types: &lt;strong&gt;script&lt;/strong&gt;, &lt;strong&gt;style&lt;/strong&gt;, &lt;strong&gt;image&lt;/strong&gt;, &lt;strong&gt;audio&lt;/strong&gt;, &lt;strong&gt;video&lt;/strong&gt;. Although general support for these types of assets is provided across browsers, individual MIME type support is subject to browser implementation differences. &lt;strong&gt;Audio&lt;/strong&gt; and &lt;strong&gt;video&lt;/strong&gt; types require a HTML5 compliant browser and a &lt;code&gt;DOCTYPE&lt;/code&gt; in order to function as expected.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;###Note for preloading HTML5 Video
+This library uses the HTML5 Video API to preload videos, but cannot guarantee that the video format provided is supported by the
+current browser. This means you need to take care of determining which video formats are supported and select your assets to preload
+accordingly. If you supply an unsupported video format, the loader will not complain, but the browser will.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
+
+&lt;p&gt;Simply include &lt;code&gt;resource-loader.js&lt;/code&gt; in your document and create an instance of &lt;code&gt;ResourceLoader&lt;/code&gt; with your preferred configuration. If you keep a reference to this object, you will be able to reuse it later on without having to instantialize a new one.&lt;/p&gt;
+
+&lt;h4 id=&#34;config-options&#34;&gt;Config options&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;resources&lt;/strong&gt;: An array of objects, each with a &lt;code&gt;type&lt;/code&gt; property with a value of &lt;code&gt;image&lt;/code&gt;, &lt;code&gt;css&lt;/code&gt; or &lt;code&gt;js&lt;/code&gt; and an URL to reference the resource by. Possible values: &lt;code&gt;Array&lt;/code&gt;, &lt;code&gt;undefined&lt;/code&gt;. Default: &lt;code&gt;[]&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;onReady&lt;/strong&gt;: A boolean indicating if the resources need to be loaded as soon as the DOM is ready or after content has loaded. Possible values: &lt;code&gt;true&lt;/code&gt;, &lt;code&gt;false&lt;/code&gt;, &lt;code&gt;undefined&lt;/code&gt;. Default: &lt;code&gt;true&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;errors&lt;/strong&gt;: A boolean indicating whether the loader should throw hard errors or simply log them to the console while ignoring them. Possible values: &lt;code&gt;true&lt;/code&gt;, &lt;code&gt;false&lt;/code&gt;, &lt;code&gt;undefined&lt;/code&gt;. Default: &lt;code&gt;true&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;full-example&#34;&gt;Full example&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;html&amp;gt;
+  &amp;lt;head&amp;gt;
+    &amp;lt;title&amp;gt;ResourceLoader Example&amp;lt;/title&amp;gt;
+  &amp;lt;/head&amp;gt;
+  &amp;lt;body&amp;gt;
+    &amp;lt;div id=&amp;quot;yourPageContent&amp;quot;&amp;gt;
+      ...
+    &amp;lt;/div&amp;gt;
+    &amp;lt;script type=&amp;quot;text/javascript&amp;quot; src=&amp;quot;resource-loader.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+    &amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;
+      var resources = [
+                        {
+                          &amp;quot;type&amp;quot;: &amp;quot;image&amp;quot;,  
+                          &amp;quot;url&amp;quot;: &amp;quot;path/to/image&amp;quot;
+                        },
+                        {
+                          &amp;quot;type&amp;quot;: &amp;quot;css&amp;quot;,
+                          &amp;quot;url&amp;quot;: &amp;quot;path/to/stylesheet&amp;quot;
+                        }
+                      ],
+          config = {
+            &amp;quot;resources&amp;quot; : resources,
+            &amp;quot;onReady&amp;quot;   : false, // Load resources after window has finished loading.
+            &amp;quot;errors&amp;quot;    : false // Disable hard errors
+          },
+          
+          // Keep reference to object and automatically preload selected resources.
+          loader = new ResourceLoader(config);
+          
+          // Use the same instance to load new resources on the go.
+          var newResource = {
+                              &amp;quot;type&amp;quot;: &amp;quot;js&amp;quot;,
+                              &amp;quot;url&amp;quot;: &amp;quot;path/to/js&amp;quot;
+                            };
+          loader.load(newResource);
+    &amp;lt;/script&amp;gt;
+  &amp;lt;/body&amp;gt;
+  
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;roadmap&#34;&gt;Roadmap&lt;/h2&gt;
+
+&lt;p&gt;This project is planned to introduce more features such as DOM element returns and AJAX loading in the future.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Helios Analytics Suite</title>
+      <link>http://example.org/blog/helios-analytics/</link>
+      <pubDate>Sat, 21 Jan 2017 14:18:24 +0100</pubDate>
+      
+      <guid>http://example.org/blog/helios-analytics/</guid>
+      <description>
+
+&lt;p&gt;Helios.js was originally written as a JavaScript library that wraps and extends the Google Universal Analytics library. It allows developers to easily integrate Analytics, AdWords and YouTube event tracking on their websites and send the gathered data to multiple Analytics properties seamlessly. The project is currently in a stable phase and being slowly improved upon.&lt;/p&gt;
+
+&lt;p&gt;Helios.js has since been ported to PHP and made available as a GUI-controlled Wordpress plugin.&lt;/p&gt;
+
+&lt;h2 id=&#34;releases&#34;&gt;Releases&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;../../open-source/helios-analytics-javascript&#34;&gt;Helios.js for front-end integration&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;../../open-source/helios-analytics-php&#34;&gt;Helios.php for server-side usage&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;../../open-source/helios-analytics-wp&#34;&gt;Helios WP for use in WordPress sites&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

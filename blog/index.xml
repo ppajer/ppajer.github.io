@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Devlog on ppajer</title>
+    <link>http://example.org/blog/index.xml</link>
+    <description>Recent content in Devlog on ppajer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 23 Jan 2017 01:57:54 +0100</lastBuildDate>
+    <atom:link href="http://example.org/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Node Modules</title>
+      <link>http://example.org/blog/node-modules/</link>
+      <pubDate>Mon, 23 Jan 2017 01:57:54 +0100</pubDate>
+      
+      <guid>http://example.org/blog/node-modules/</guid>
+      <description>&lt;p&gt;Giving back to the NPM community is awesome.&lt;/p&gt;
+
+&lt;p&gt;Just like on the front-end, I take great care of optimal resource usage - the &lt;a href=&#34;../../open-source/node-modules-manager/&#34;&gt;node-modules-manager&lt;/a&gt; module is the result of my engineering efforts to reduce the number of concurrent modules required by node apps and make lazy loading fast and safe. It is also available and actively developed on NPM, and has been tested and downloaded thousands of times since being published.&lt;/p&gt;
+
+&lt;p&gt;The &lt;a href=&#34;../../open-source/node-wcjs-keybindings&#34;&gt;wcjs-keybindings&lt;/a&gt; module was created with more of a UX viewpoint in mind. It is plugin to the popular node implementation of the [in]famous WebChimera.js video player, which brings magic such as AVI playback to the web, courtesy of VLC player binaries. It implements an extendable set of keyboard controls for the video player such as arrow seeking and volume control, and allows developers to add their own keybindings via a flexible API.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Optimization Toolkits</title>
+      <link>http://example.org/blog/optimization-toolkits/</link>
+      <pubDate>Mon, 23 Jan 2017 01:14:17 +0100</pubDate>
+      
+      <guid>http://example.org/blog/optimization-toolkits/</guid>
+      <description>&lt;p&gt;These handy little libraries were created to facilitate regular development tasks related to page and app speed optimization. On the server side, the &lt;a href=&#34;../../open-source/stylesheet-manager-php/&#34;&gt;PHP stylesheet manager class&lt;/a&gt; helps front-end engineers organise and inline their critical and non-critical CSS files before being transmitted to the browser. Running on the client, the more generic &lt;a href=&#34;../../open-source/resource-loader-js/&#34;&gt;JavaScript Resource Loader&lt;/a&gt; makes it easy to preload and lazy-load all kinds of resources, including javascript, css, image and even HTML5 audio and video files.&lt;/p&gt;
+
+&lt;p&gt;I intend to consolidate further recurring tasks into libraries as they get successfully abstracted away in my day-to-day workflow.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Helios Analytics Suite</title>
+      <link>http://example.org/blog/helios-analytics/</link>
+      <pubDate>Sat, 21 Jan 2017 14:18:24 +0100</pubDate>
+      
+      <guid>http://example.org/blog/helios-analytics/</guid>
+      <description>
+
+&lt;p&gt;Helios.js was originally written as a JavaScript library that wraps and extends the Google Universal Analytics library. It allows developers to easily integrate Analytics, AdWords and YouTube event tracking on their websites and send the gathered data to multiple Analytics properties seamlessly. The project is currently in a stable phase and being slowly improved upon.&lt;/p&gt;
+
+&lt;p&gt;Helios.js has since been ported to PHP and made available as a GUI-controlled Wordpress plugin.&lt;/p&gt;
+
+&lt;h2 id=&#34;releases&#34;&gt;Releases&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;../../open-source/helios-analytics-javascript&#34;&gt;Helios.js for front-end integration&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;../../open-source/helios-analytics-php&#34;&gt;Helios.php for server-side usage&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;../../open-source/helios-analytics-wp&#34;&gt;Helios WP for use in WordPress sites&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

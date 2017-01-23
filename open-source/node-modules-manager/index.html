@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en-us" style="margin-top:5em;">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A Node.js Module Loader | ppajer</title>
+<link rel="stylesheet" href="http://example.org//css/style.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/default.min.css">
+
+
+<section style="position:fixed;top:0;left:0;width:100%;background:#fff;z-index:100;padding:0.5em;" class="section">
+  <div class="container">
+    <nav class="nav">
+      <div class="nav-left">
+        <a class="nav-item" href="http://example.org/"><h1 class="title is-4">ppajer</h1></a>
+        
+        <a class="nav-item" href="/open-source/">Open Source</a>
+        
+        <a class="nav-item" href="/blog/">Devlog</a>
+        
+        <a class="nav-item" href="/contact/">Contact me</a>
+        
+      </div>
+      <div class="nav-right">
+        <nav class="nav-item level is-mobile">
+          
+        </nav>
+      </div>
+    </nav>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="subtitle is-6">January 23, 2017</h2>
+    <h1 class="title">A Node.js Module Loader</h1>
+    <div class="content">
+      <p>node-modules-manager is a lightweight module loader with the goal of optimizing the way you manage your modules and memory during development of apps with lots of dependencies. It can reduce load times and friction by allowing the developer to preload and lazy-load modules with ease, and to clear unused modules from memory as soon as possible.
+</p>
+
+<h2 id="how-to-use">How to use</h2>
+
+<h3 id="set-up-a-base-directory">Set up a base directory</h3>
+
+<p>The module loader requires a base path to be able to handle relative module paths. You can pass the base path as the first parameter of the constructor.</p>
+
+<pre><code>const Manager = require('node-modules-manager').createManager('full/path/to/rootdir');
+</code></pre>
+
+<h2 id="loading-modules">Loading modules</h2>
+
+<h3 id="load-locally-installed-modules">Load locally installed modules</h3>
+
+<p>To load a module installed globally or as dependency, you can simply pass the module&rsquo;s name to the <a href="#initialize-with-preloaded-modules">constructor</a> <code>loadModule()</code> method to load the module for later use, or the <code>getModule()</code> method to use the module right away. You can also <a href="#load-modules-with-an-alias">pass an object to customize the name you access your modules by</a>.</p>
+
+<pre><code>const Manager = require('node-modules-manager').createManager('rootdir');
+
+// To load a module for later use. Returns true upon success or false if the module wasn't found.
+Manager.loadModule('installedModule');
+
+// To use a module and load it to the modules list. Returns the loaded module for immediate use.
+Manager.getModule('fs').readDirSync(/* ... */);
+</code></pre>
+
+<h3 id="load-modules-by-path">Load modules by path</h3>
+
+<p>To load a module by path, you can pass the module&rsquo;s path to the <a href="#initialize-with-preloaded-modules">constructor</a>, <code>loadModule()</code> or <code>getModule()</code>. The module will then be accessible through either its full path or the filename of the module (the part of the path after the last <code>/</code>). You can also <a href="#load-modules-with-an-alias">pass an object to customize the name you access your modules by</a>.</p>
+
+<pre><code>const Manager = require('node-modules-manager').createManager('rootdir');
+
+// Load module by passing full path
+Manager.loadModule('path/to/module.js');
+
+// Can later be accessed by calling:
+Manager.getModule('path/to/module.js');
+
+//OR
+Manager.getModule('module.js');
+</code></pre>
+
+<h3 id="initialize-with-preloaded-modules">Initialize with preloaded modules</h3>
+
+<p>Sometimes there are some modules you simply cannot delay loading. To avoid making unnecessary calls to <code>loadModule()</code>, you can pass an array of module names, paths, or <a href="#load-modules-with-an-alias">objects</a> to the constructor and the module loader will load them right away.</p>
+
+<pre><code>let modules = [
+		'fs', 
+		'path', 
+		'path/to/some/module', 
+		'other-required-module'
+	];
+const Manager = require('node-modules-manager').createManager('rootdir', modules);
+</code></pre>
+
+<h3 id="load-modules-with-an-alias">Load modules with an alias</h3>
+
+<p>To access your modules by a name different from the module&rsquo;s own name, you can pass an object to the constructor or <code>loadModule()</code> methods. The keys <code>name</code> and <code>path</code> must be specified on all objects passed this way, and can later be accessed by passing the value of <code>name</code> to <code>getModule()</code>.</p>
+
+<pre><code>// Initialize and pass aliased object as module to the constructor
+let modules = [
+		{
+			name: 'exampleModule', 
+			path:'path/to/example-module.min.js'
+		}
+	];
+const Manager = require('node-modules-manager').createManager('rootdir', modules); 
+// will preload the contents of 'rootdir/path/to/example-module.min.js' as 'exampleModule'
+
+// OR
+Manager.loadModule({name: 'exampleModule', path:'path/to/example-module.min.js'}); 
+// will preload the contents of 'rootdir/path/to/example-module.min.js' as 'exampleModule'
+
+// OR 
+Manager.getModule({name: 'exampleModule', path:'path/to/example-module.min.js'}); 
+// will return the contents of 'rootdir/path/to/example-module.min.js' as 'exampleModule'
+
+// Then sometime later...
+Manager.getModule('exampleModule'); 
+//will return the contents of ModuleLoader.modulesLoaded.exampleModule
+</code></pre>
+
+<h3 id="loading-a-module-once">Loading a module once</h3>
+
+<p>Do you only need to call a module once and then remove all references to it to keep it from hogging memory? This project has you covered! You can simply pass a callback along with the name of the module it requires to ˙getModuleOnce()` and be rid of all traces outside of your callback function. If the module has been preloaded beforehand and you want to unload it after use, set the optional third parameter of the method to a truthy value - this will force unload the module after the callback has executed. <em>This method will warn you if you already preloaded the required module to highlight possible optimization issues.</em></p>
+
+<pre><code>const Manager = require('node-modules-manager').createManager('rootdir');
+
+Manager.getModuleOnce('exampleModule', function(module) {
+	console.log(module); //exampleModule
+});
+
+// the module never lives outside the Manager
+
+// OR 
+// set the second optional forceUnload parameter to true 
+// this removes the module from memory even if it was explicitly loaded before
+Manager.loadModule('exampleModule');
+Manager.getModuleOnce('exampleModule', function(module) {
+	console.log(module);//exampleModule
+}, true);
+
+console.log(Manager.isModuleLoaded('exampleModule')); //false
+
+</code></pre>
+
+<h2 id="unloading-modules">Unloading modules</h2>
+
+<p>When you&rsquo;re done using some module functionality, it is sometimes preferable to drop the module from memory instead of bloating your Manager instance if you don&rsquo;t plan on reusing it soon. You can unload the contents of a module at any time by calling the <code>unloadModule()</code> method with either a module name, path or alias. The method returns <code>null</code> on success so that its return value can be used to reset your references to the module.</p>
+
+<pre><code>// Load the module
+const Manager = require('node-modules-manager').createManager('rootdir');
+let someModule = Manager.loadModule('someModule');
+
+// Use it while it's hot
+someModule.doSomething();
+
+// Drop from memory to speed things up when you're done
+someModule = Manager.unloadModule('someModule');
+
+console.log(someModule); // null
+</code></pre>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container has-text-centered">
+    <p></p>
+  </div>
+</section>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+

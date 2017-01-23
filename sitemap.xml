@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>http://example.org/open-source/</loc>
+    <lastmod>2017-01-21T14:55:50+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/</loc>
+    <lastmod>2017-01-23T01:57:54+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/contact/</loc>
+    <lastmod>2017-01-21T14:55:50+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/node-modules/</loc>
+    <lastmod>2017-01-23T01:57:54+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/open-source/node-wcjs-keybindings/</loc>
+    <lastmod>2017-01-23T01:49:29+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/open-source/helios-analytics-javascript/</loc>
+    <lastmod>2017-01-23T01:38:18+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/open-source/node-modules-manager/</loc>
+    <lastmod>2017-01-23T01:23:38+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/open-source/stylesheet-manager-php/</loc>
+    <lastmod>2017-01-23T01:21:17+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/optimization-toolkits/</loc>
+    <lastmod>2017-01-23T01:14:17+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/open-source/resource-loader-js/</loc>
+    <lastmod>2017-01-23T01:10:54+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/helios-analytics/</loc>
+    <lastmod>2017-01-21T14:18:24+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/</loc>
+    <lastmod>2017-01-23T01:57:54+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+</urlset>

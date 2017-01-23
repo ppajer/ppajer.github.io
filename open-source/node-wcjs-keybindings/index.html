@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en-us" style="margin-top:5em;">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Keyboard Shortcuts for wcjs-player in Node.js | ppajer</title>
+<link rel="stylesheet" href="http://example.org//css/style.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/default.min.css">
+
+
+<section style="position:fixed;top:0;left:0;width:100%;background:#fff;z-index:100;padding:0.5em;" class="section">
+  <div class="container">
+    <nav class="nav">
+      <div class="nav-left">
+        <a class="nav-item" href="http://example.org/"><h1 class="title is-4">ppajer</h1></a>
+        
+        <a class="nav-item" href="/open-source/">Open Source</a>
+        
+        <a class="nav-item" href="/blog/">Devlog</a>
+        
+        <a class="nav-item" href="/contact/">Contact me</a>
+        
+      </div>
+      <div class="nav-right">
+        <nav class="nav-item level is-mobile">
+          
+        </nav>
+      </div>
+    </nav>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="subtitle is-6">January 23, 2017</h2>
+    <h1 class="title">Keyboard Shortcuts for wcjs-player in Node.js</h1>
+    <div class="content">
+      <p>This modules brings keyboard shortcuts to wcjs-player, the node implementation of webchimera.js, which is basically VLC player in a javascript wrapper - awesome.
+Simply <code>require</code> and pass it an instance of wcjs-player to bring a keyboard powered, more desktop-like experience to your users.
+</p>
+
+<p><em>This module is fully cross-browser compatible.</em></p>
+
+<h2 id="how-to-use">How to use</h2>
+
+<p>Include <code>wcjs-keybindings</code> in your project&rsquo;s dependency list, run <code>npm install</code>, then whenever you need some keybinding sugar for your wcjs-player, get a controller from this module.</p>
+
+<pre><code>require('wcjs-keybindings').getController(wcjsPlayerInstance);
+</code></pre>
+
+<h2 id="default-keybindings">Default Keybindings</h2>
+
+<ul>
+<li><strong>Spacebar</strong>: play/pause</li>
+<li><strong>Right Arrow</strong>: forwards 5 seconds</li>
+<li><strong>Left Arrow</strong>: backwards 5 seconds</li>
+<li><strong>Up Arrow</strong>: increase volume by 5%</li>
+<li><strong>Down Arrow</strong>: decrease volume by 5%</li>
+</ul>
+
+<h2 id="custom-keybindings">Custom keybindings</h2>
+
+<p>To include custom keybindings, you can pass an object as second argument to the constructor. This object must have the desired keycodes as keys and function definitions as values.
+Within the scope of these handler functions, you can use <code>this</code> to refer to the controller, and <code>this.player</code> to refer to the instance of wcjs-player handler by the controller.
+Here is an example to toggle fullscreen mode upon pressing <kbd>F</kbd></p>
+
+<pre><code>var keyBindings = {
+	70 : function() {
+		this.player.toggleFullscreen();
+	}
+};
+
+require('wcjs-keybindings').getController(wcjsPlayerInstance, keyBindings)
+</code></pre>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container has-text-centered">
+    <p></p>
+  </div>
+</section>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+
